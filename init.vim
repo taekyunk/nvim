@@ -41,6 +41,9 @@ colorscheme evening
 nnoremap / /\v
 vnoremap / /\v
 
+" clear search terms
+nnoremap <silent> <leader><space> :nohlsearch<cr>
+
 " https://stackoverflow.com/questions/21316727/automatic-closing-brackets-for-vim
 inoremap " ""<left>
 inoremap ' ''<left>
@@ -53,12 +56,8 @@ inoremap {;<CR> {<CR>};<ESC>O
 " consistent with C and D
 nnoremap Y y$
 
-" clear search terms
-nnoremap <silent> <leader><space> :nohlsearch<cr>
-
 " encoding
 set encoding=utf-8
-
 
 " apply macro with Q. qq to create macro using register q, quit with q
 " apply with Q
@@ -69,6 +68,9 @@ vnoremap Q :norm @q<cr>
 " https://stackoverflow.com/a/5563142/4475353
 nnoremap  <silent>   <tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bnext<CR>
 nnoremap  <silent> <s-tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bprevious<CR>
+
+" close buffer
+nnoremap <leader>w :bdelete<cr>
 
 " add blank line
 " http://vim.wikia.com/wiki/Insert_newline_without_entering_insert_mode
@@ -81,4 +83,12 @@ vnoremap > >gv
 
 " allow moving into blank space in visual block mode
 set virtualedit=block
+
+" move by screen line without count, but move by actual line with count
+nnoremap <expr> k v:count == 0 ? 'gk' : 'k'
+nnoremap <expr> j v:count == 0 ? 'gj' : 'j'
+xnoremap <expr> k v:count == 0 ? 'gk' : 'k'
+xnoremap <expr> j v:count == 0 ? 'gj' : 'j'
+
+set ruler
 
