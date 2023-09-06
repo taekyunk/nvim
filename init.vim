@@ -34,7 +34,7 @@ set clipboard^=unnamed,unnamedplus
 " fast edit vimrc
 nmap <leader>v :edit $MYVIMRC<CR>
 
-colorscheme evening
+colorscheme desert
 
 "" Use 'magic' for search always
 " From http://stevelosh.com/blog/2010/09/coming-home-to-vim/
