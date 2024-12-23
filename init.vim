@@ -16,12 +16,13 @@ set shiftwidth=4            " width for autoindents
 
 set autoindent              " indent a new line the same amount as the line just typed
 set number                  " add line numbers
-set relativenumber          " relative line number
+"set relativenumber          " relative line number
 set wildmode=longest,list   " get bash-like tab completions
 set cc=80                  " set an 80 column border for good coding style
 filetype plugin indent on   "allow auto-indenting depending on file type
 syntax on                   " syntax highlighting
 filetype plugin on
+set fileformats=unix,dos    " Use LF first
 set cursorline              " highlight current cursorline
 set ttyfast                 " Speed up scrolling in Vim
 " set spell                 " enable spell check (may need to download language package)
@@ -34,7 +35,9 @@ set clipboard^=unnamed,unnamedplus
 " fast edit vimrc
 nmap <leader>v :edit $MYVIMRC<CR>
 
-colorscheme desert
+" themes that I tried
+" darktheme: desert
+colorscheme morning
 
 "" Use 'magic' for search always
 " From http://stevelosh.com/blog/2010/09/coming-home-to-vim/
@@ -45,13 +48,14 @@ vnoremap / /\v
 nnoremap <silent> <leader><space> :nohlsearch<cr>
 
 " https://stackoverflow.com/questions/21316727/automatic-closing-brackets-for-vim
-inoremap " ""<left>
-inoremap ' ''<left>
-inoremap ( ()<left>
-inoremap [ []<left>
-inoremap { {}<left>
-inoremap {<CR> {<CR>}<ESC>O
-inoremap {;<CR> {<CR>};<ESC>O
+" This increases characters to delete when I mistyped
+" inoremap " ""<left>
+" inoremap ' ''<left>
+" inoremap ( ()<left>
+" inoremap [ []<left>
+" inoremap { {}<left>
+" inoremap {<CR> {<CR>}<ESC>O
+" inoremap {;<CR> {<CR>};<ESC>O
 
 " consistent with C and D
 nnoremap Y y$
