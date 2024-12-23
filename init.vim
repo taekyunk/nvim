@@ -37,6 +37,7 @@ nmap <leader>v :edit $MYVIMRC<CR>
 
 " themes that I tried
 " darktheme: desert
+"colorscheme desert
 colorscheme morning
 
 "" Use 'magic' for search always
