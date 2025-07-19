@@ -1,5 +1,6 @@
 # About
-My setup for Nvim
+- My setup for Nvim
+- Also works as a minimal set up for Vim/Gvim
 
 # Author
 Taekyun (TK) Kim
